@@ -110,6 +110,10 @@ main p {
 
 
 @media (max-width: 800px) {
+    .logo-img {
+        margin-right: 0;
+    }
+    
     .topnav ul {
         flex-direction: column;
         align-items: center;
@@ -120,7 +124,6 @@ main p {
         margin-left: 0;
         padding-right: 0;
     }
-
 
     .bottomnav ul {
         flex-direction: column;

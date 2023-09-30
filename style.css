@@ -6,6 +6,7 @@
 
 header {
     grid-area: header;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /*https://web.dev/learn/css/grid/*/
@@ -17,27 +18,30 @@ body {
         "footer footer footer";
      /*top/bottom margi, left/right margin center*/
      margin: 0 auto;
-     background-color: #FFFAEF;
+     background-color: white;
 }
 
 footer {
     grid-area: footer;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .logo-img {
-    max-width: 150px;
+    max-width: 175px;
     height: auto;
+    border-radius: 5px;
+    margin-right: 2em;
 }
 
 .topnav, .bottomnav{
-    background-color: #f48e3bc6;
+    background-color: #ff7700;
 }
   
 /*reset default list styles*/
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 1em;
   }
   
 .topnav ul {
@@ -45,11 +49,20 @@ ul {
     align-items: center;
 }
 
-/*login/register button*/
+/*login/register button positioning*/
 .topnav ul li:nth-child(5) {
     margin-left: auto;
     padding-right: 20px; 
 }
+
+/*login/register button text*/
+.topnav ul li:nth-child(5) a {
+    font-size: 18px;
+    background-color: #cc5500;
+    border-radius: 5px;
+    padding: 1em;
+}
+
 
 .login-register-btn {
     margin-left: auto
@@ -68,16 +81,16 @@ ul {
     display: block; 
     color: #f2f2f2;
     /*top/bottom padding, left/right padding*/
-    padding: 10px 10px;
+    padding: 0.5em;
     /*remove underline*/
     text-decoration: none;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: bold;
 }
 
 /*hover effect for links*/
 .topnav ul li a:hover, .bottomnav ul li a:hover {
-    background-color: #995c34;
+    color: darkgray;
 }
 
 main {
@@ -86,11 +99,9 @@ main {
     place-items:  center;
     /*https://web.dev/learn/css/grid/*/
     /*minmax(min size, max size)*/
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-gap: 10px; 
     min-height: 100vh;
-    
 }
 
 main p {
@@ -114,5 +125,9 @@ main p {
     .bottomnav ul {
         flex-direction: column;
         align-items: center;
+    }
+
+    main {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
     }
 }

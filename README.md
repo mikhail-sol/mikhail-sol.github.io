@@ -1,1 +1,0 @@
-# mikhail-sol.github.io

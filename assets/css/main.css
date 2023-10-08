@@ -1,0 +1,44 @@
+/*CSS code here*/
+.bg-primary {
+    background-color: #ff7700 !important;
+}
+
+.text-primary {
+    color: #ff7700 !important;
+}
+
+
+.border-primary {
+    border-color: #ff7700 !important;
+}
+
+.btn-primary {
+    background-color: #ff7700 !important;
+}
+
+.text-primary {
+    color: #000000 !important;
+
+}
+
+.nav-link {
+    text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    .nav-item {
+        text-align: center;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    /*flex grow (1), flex shrink (0), flex basis (auto)*/
+    /*grow to fill any remaining space in container, wont shrink smaller than set size, set default element size*/
+    flex: 1 0 auto; 
+}
